@@ -59,7 +59,7 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 		- NuGet 
 			- Google's protobuf
 		- C#
-			- 
+			- ...
 
 - Visual Studio Project
 	- .NET Framework Console App
@@ -68,11 +68,14 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 
 - Node project 
 	- Angular
-		- NPM install ... 
 		* **CLIENT**
+		- NPM install ... 
+		- ...
 
 
+### Resources
 
+- [Github API docs](https://developer.github.com/v3/)
 
 
 ### Concepts
@@ -86,3 +89,6 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 
 ### Gotchas
 
+- small number of only 60 requests hourly allowed from GitHub without authentication.
+	- >> different Authentication options liksted under [/#authentication](https://developer.github.com/v3/#authentication) here. >> need an **OAUTH-TOKEN** to access much larger number of 5000 per hour, as mentioned in the [/#rate-limiting](https://developer.github.com/v3/#rate-limiting) rules. 
+	- how to get github oauth token ... perhaps unnecessary for now.
