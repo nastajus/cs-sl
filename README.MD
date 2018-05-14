@@ -89,6 +89,4 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 
 ### Gotchas
 
-- small number of only 60 requests hourly allowed from GitHub without authentication.
-	- >> different Authentication options liksted under [/#authentication](https://developer.github.com/v3/#authentication) here. >> need an **OAUTH-TOKEN** to access much larger number of 5000 per hour, as mentioned in the [/#rate-limiting](https://developer.github.com/v3/#rate-limiting) rules. 
-	- how to get github oauth token ... perhaps unnecessary for now.
+- [Cast Object to actual type](https://stackoverflow.com/questions/12234097/how-to-cast-object-to-its-actual-type) -- when both known and unknown.
