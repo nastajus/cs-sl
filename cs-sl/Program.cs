@@ -37,10 +37,16 @@ namespace cs_sl
 
             string readText = File.ReadAllText(path);
 
-            object deserializedObject = JsonConvert.DeserializeObject(readText);
+            Cat schrodinger = JsonConvert.DeserializeObject<Cat>(readText);
 
+            //object deserializedObject = JsonConvert.DeserializeObject(readText);
             //'Unable to cast object of type 'Newtonsoft.Json.Linq.JObject' to type 'cs_sl.Cat'.'
-            Cat schrodinger = (Cat) deserializedObject;
+            //Cat schrodinger = (Cat) deserializedObject;
+
+
+            // interesting to dos later as bonus to deepen understanding: 
+            // later 1: nest object of same type, see if system gets confused.
+            // later 2: can try using serializer settings to store types and apply those types when deserialized.
 
 
         }

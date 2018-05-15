@@ -90,3 +90,11 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 ### Gotchas
 
 - [Cast Object to actual type](https://stackoverflow.com/questions/12234097/how-to-cast-object-to-its-actual-type) -- when both known and unknown.
+
+
+### interesting 
+-[serializer settings](https://stackoverflow.com/questions/31474858/deserialize-to-real-underlying-type-with-newtonsoft-json)
+
+- [Serialization Guide](https://www.newtonsoft.com/json/help/html/SerializationGuide.htm#Objects)
+
+https://stackoverflow.com/questions/42736347/newtonsoft-json-deserialization-into-specific-types
