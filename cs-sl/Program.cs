@@ -71,8 +71,12 @@ namespace cs_sl
 
             // step 2 : to actually deserialize, must convert to a known type.  Wrote my own "known type" : RateLimitResponseContent class, per the sample json response commented below.
 
-            RateLimitResponseContent rateLimit =  JsonConvert.DeserializeObject<RateLimitResponseContent>(response.Content);
+            RateLimitResponseContent rateLimit = JsonConvert.DeserializeObject<RateLimitResponseContent>(response.Content);
 
+            // step 3 : create an instance with sensible defaults and overwrite it with json data       
+
+            RateLimitResponseContent rateLimit2 =
+                new RateLimitResponseContent { rate = new RateLimitResponseContent.Thing { limit = 0, remaining = 0, reset = 0 }, resources = new RateLimitResponseContent.Resources { core = new RateLimitResponseContent.Thing { limit = 0, remaining = 0, reset = 0 }, search = new RateLimitResponseContent.Thing { limit = 0, remaining = 0, reset = 0 } } };
 
         }
     }
@@ -93,7 +97,6 @@ namespace cs_sl
         {
             public Thing core { get; set; }
             public Thing search { get; set; }
-            public Thing graphql { get; set; }
         }
 
         public class Thing
@@ -118,13 +121,8 @@ namespace cs_sl
                 "limit": 10,
                 "remaining": 10,
                 "reset": 1526328488
-            },
-            "graphql": {
-                "limit": 0,
-                "remaining": 0,
-                "reset": 1526332028
             }
-        },
+       },
         "rate": {
             "limit": 60,
             "remaining": 54,

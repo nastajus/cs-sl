@@ -100,6 +100,7 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 
 - [Serialization Guide](https://www.newtonsoft.com/json/help/html/SerializationGuide.htm#Objects)
 
+- [c# object initializer](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers)
 
 ### Rapid unorganized notes
 
