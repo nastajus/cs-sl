@@ -91,10 +91,18 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 
 - [Cast Object to actual type](https://stackoverflow.com/questions/12234097/how-to-cast-object-to-its-actual-type) -- when both known and unknown.
 
+- [Using JsonConvert.DeserializeObject on Nested Object
+](https://stackoverflow.com/questions/35206019/using-jsonconvert-deserializeobject-on-nested-object)
+
 
 ### interesting 
 -[serializer settings](https://stackoverflow.com/questions/31474858/deserialize-to-real-underlying-type-with-newtonsoft-json)
 
 - [Serialization Guide](https://www.newtonsoft.com/json/help/html/SerializationGuide.htm#Objects)
 
+
+### Rapid unorganized notes
+
 https://stackoverflow.com/questions/42736347/newtonsoft-json-deserialization-into-specific-types
+
+checked github docs for a Type definition like perhaps swagger?
