@@ -14,7 +14,9 @@ Phase 1
 Phase 2
 1. Import package RestSharp
 1. Make a REST call to an endpoint and deserialize the return with: [package name: Newtonsoft / library name: JSON.NET ] 
-1. Do same step as above but not as class but with an anonymous type (deserialize) (Probably use `populateObject()` method in Newtonsoft) 
+1. Do same step as above but, instead of deserializing into a new instance, create an instance with sensible defaults and overwrite it with json data         (use `populateObject()` method in Newtonsoft)
+1. Delete the class, use an anonymous object (to accomplish the same thing)
+1. ~~Do same step as above but not as class but with an anonymous type (deserialize) (Probably use populateObject() method in Newtonsoft)~~
 	* Thus far, that covers how to use NuGet, Newtonsoft, and RestSharp, all important fundamentals.
 
 Phase 3

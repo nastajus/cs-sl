@@ -52,7 +52,7 @@ namespace cs_sl
 
             // interesting to dos later as bonus to deepen understanding: 
             // later 1: nest object of same type, see if system gets confused.
-            // later 2: can try using serializer settings to store types and apply those types when deserialized.
+            // later 2: can try using "serializer settings" i discovered to <<store types and apply those types>> when deserialized.
 
         }
 
@@ -73,10 +73,23 @@ namespace cs_sl
 
             RateLimitResponseContent rateLimit = JsonConvert.DeserializeObject<RateLimitResponseContent>(response.Content);
 
-            // step 3 : create an instance with sensible defaults and overwrite it with json data       
+            // step 3 : create an instance with sensible defaults and overwrite it with json data
 
             RateLimitResponseContent rateLimit2 =
                 new RateLimitResponseContent { rate = new RateLimitResponseContent.Thing { limit = 0, remaining = 0, reset = 0 }, resources = new RateLimitResponseContent.Resources { core = new RateLimitResponseContent.Thing { limit = 0, remaining = 0, reset = 0 }, search = new RateLimitResponseContent.Thing { limit = 0, remaining = 0, reset = 0 } } };
+
+            JsonConvert.PopulateObject(response.Content, rateLimit2);
+
+            // step 4 : Delete the class / don't use, instead use an anonymous object (to accomplish the same thing).
+
+            var rateLimit3 = new { rate = new { limit = 0, remaining = 0, reset = 0 }, resources = new { core = new { limit = 0, remaining = 0, reset = 0 }, search = new { limit = 0, remaining = 0, reset = 0 }, reset = new { limit = 0, remaining = 0, reset = 0 } } };
+
+            // nothing happens, type remains with all defaults unchanged
+            //JsonConvert.PopulateObject(response.Content, rateLimit3);
+
+            JsonConvert.DeserializeAnonymousType(response.Content, rateLimit3);
+
+            int foo = 3;
 
         }
     }
