@@ -17,6 +17,7 @@ namespace cs_sl
 
             Phase1();
             Phase2();
+            Phase3();
 
         }
 
@@ -69,7 +70,7 @@ namespace cs_sl
             request.Resource = "rate_limit";
 
             IRestResponse response = client.Execute(request);
-            client.Ex
+            //client.Ex
 
             // step 2 : to actually deserialize, must convert to a known type.  Wrote my own "known type" : RateLimitResponseContent class, per the sample json response commented below.
 
@@ -105,6 +106,11 @@ namespace cs_sl
             // nothing happens, type remains with all defaults unchanged
             JsonConvert.PopulateObject(response.Content, rateLimit3);
             JsonConvert.DeserializeAnonymousType(response.Content, rateLimit3);
+        }
+        
+        static void Phase3()
+        {
+
         }
     }
 

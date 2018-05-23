@@ -16,7 +16,7 @@ Phase 2
 1. Make a REST call to an endpoint and deserialize the return with: [package name: Newtonsoft / library name: JSON.NET ] 
 1. Do same step as above but, instead of deserializing into a new instance, create an instance with sensible defaults and overwrite it with json data         (use `populateObject()` method in Newtonsoft)
 1. Delete the class, use an anonymous object (to accomplish the same thing)
-1. ~~Do same step as above but not as class but with an anonymous type (deserialize) (Probably use populateObject() method in Newtonsoft)~~
+1. ~~Do same step as above but not as class but with an anonymous type (deserialize) (Probably use populateObject() method in Newtonsoft) --> not possible it seems at this time. ~~
 	* Thus far, that covers how to use NuGet, Newtonsoft, and RestSharp, all important fundamentals.
 
 Phase 3
@@ -95,6 +95,12 @@ NOTE: Currently the existing Task list above doesn't seem to conform to the serv
 
 - [Using JsonConvert.DeserializeObject on Nested Object
 ](https://stackoverflow.com/questions/35206019/using-jsonconvert-deserializeobject-on-nested-object)
+
+- package references broken / solution
+	- package dependencies aren't restored correctly by the following process:
+		- to re-acquire packages, right-click on Solution >> choose `Manage NuGet Packages for Solution...`, a banner along the top should have the button `Restore` visible, click that. 
+	- instead for visual studio 2017 to know and get the references
+		- uninstall each package and reinstall. 
 
 
 ### interesting 
